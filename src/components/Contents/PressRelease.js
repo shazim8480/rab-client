@@ -4,25 +4,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import CalendarContainer from "./CalendarContainer";
 
-export default function PressRelease({ pressRelease }) {
-  const { description, title } = pressRelease;
+import pressRelease from "../../data/home/pressRelease";
 
+export default function PressRelease() {
   return (
     <ContentContainer>
-      <div className="flex justify-start items-center mb-3">
+      <div className="flex justify-start items-center mb-5">
         <FontAwesomeIcon
           className="text-green-700"
           icon={faNewspaper}
           size="2xl"
         />
-        <h5 className="text-gray-900 text-xl font-medium mb-2 ml-3">{title}</h5>
+        <h5 className="text-gray-900 text-xl font-medium ml-3">প্রেস রিলিজ</h5>
       </div>
-      <CalendarContainer />
+
       <div>
-        {description.map((value, index) => (
-          <p className="mb-5" key={index}>
-            {value}
-          </p>
+        {pressRelease.map((pressRelease, index) => (
+          <div className="flex justify-center items-start mb-5">
+            <CalendarContainer pressRelease={pressRelease} />
+            <p key={index} className="pl-5" pressRelease={pressRelease}>
+              {pressRelease.description}
+            </p>
+          </div>
         ))}
       </div>
     </ContentContainer>

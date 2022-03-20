@@ -15,16 +15,14 @@ export default function ContentArea() {
           <MainContent key={idx} mainContent={mainContent} />
         ))}
       </section>
-      <section className="grid lg:grid-cols-2 items-center">
+      <section className="grid lg:grid-cols-2 items-start">
         <article>
           {blog.map((blog, idx) => (
             <Blog key={idx} blog={blog} />
           ))}
         </article>
         <article>
-          {pressRelease.map((pressRelease, idx) => (
-            <PressRelease key={idx} pressRelease={pressRelease} />
-          ))}
+          <PressRelease pressRelease={pressRelease} />
         </article>
       </section>
     </main>
