@@ -1,18 +1,27 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContentContainer from "./ContentContainer";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 export default function Blog({ blog }) {
-  const { description, title } = blog;
+  const { description } = blog;
 
   return (
     <ContentContainer>
-      <h5 className="text-gray-900 text-xl font-medium mb-2">{title}</h5>
-      {/* <p className="text-gray-700 text-base mb-4 line-clamp-5">
-        {blog.description}
-      </p> */}
+      <div className="flex justify-start items-center mb-5">
+        <FontAwesomeIcon
+          className="text-primary"
+          icon={faTriangleExclamation}
+          size="2xl"
+        />
+        <h5 className="text-primary font-semibold text-xl ml-3">
+          RAB কর্তৃক প্রদত্ত পরামর্শ
+        </h5>
+      </div>
+
       <div>
         {description.map((value, index) => (
-          <p className="mb-5" key={index}>
+          <p className="mb-5 line-clamp-4 text-bodyText text-md" key={index}>
             {value}
           </p>
         ))}
