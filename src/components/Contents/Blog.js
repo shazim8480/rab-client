@@ -8,7 +8,7 @@ export default function Blog({ blog }) {
 
   return (
     <ContentContainer>
-      <div className="flex justify-start items-center mb-5">
+      <div className="flex justify-start items-center mb-5 ">
         <FontAwesomeIcon
           className="text-primary"
           icon={faTriangleExclamation}

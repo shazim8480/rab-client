@@ -10,12 +10,12 @@ import pressRelease from "../../data/home/pressRelease";
 export default function ContentArea() {
   return (
     <main className="space-y-12">
-      <section className="grid lg:grid-cols-2 items-center">
+      <section className="grid lg:grid-cols-2 gap-4 lg:gap-0 items-center">
         {mainContent.map((mainContent, idx) => (
           <MainContent key={idx} mainContent={mainContent} />
         ))}
       </section>
-      <section className="grid lg:grid-cols-2 items-start">
+      <section className="grid lg:grid-cols-2 gap-4 lg:gap-0 items-start">
         <article>
           {blog.map((blog, idx) => (
             <Blog key={idx} blog={blog} />

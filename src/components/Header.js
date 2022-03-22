@@ -2,54 +2,25 @@ import React from "react";
 
 export default function Header() {
   return (
-    <header className="text-gray-600 body-font">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a
-          href="/"
-          className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            className="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-          </svg>
-        </a>
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-          <a href="/" className="mr-5 hover:text-gray-900">
-            First Link
-          </a>
-          <a href="/" className="mr-5 hover:text-gray-900">
-            Second Link
-          </a>
-          <a href="/" className="mr-5 hover:text-gray-900">
-            Third Link
-          </a>
-          <a href="/" className="mr-5 hover:text-gray-900">
-            Fourth Link
-          </a>
-        </nav>
-        <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-          Button
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            className="w-4 h-4 ml-1"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </button>
+    <section className="absolute top-0 left-0 z-10 w-full font-display px-6 h-32 flex justify-around items-center bg-green-800 opacity-75">
+      {/* div for RAB logo and Headline */}
+      <div className="flex justify-between py-10">
+        <div className="h-24 w-24">
+          <img src={require("../images/logo.png")} alt="rab" />
+        </div>
+        <div className="text-left text-white pl-5 md:pt-4 lg:pt-4 pt-2">
+          <h2 className="lg:text-4xl md:text-3xl text-xl font-bold tracking-wide">
+            RAPID ACTION BATTALION
+          </h2>
+          <h5 className="tracking-widest lg:text-xl md:text-md text-sm pt-1 font-semibold">
+            fight against terror
+          </h5>
+        </div>
       </div>
-    </header>
+      {/* div for govt logo  */}
+      <div className="h-20 w-20">
+        <img src={require("../images/gov.png")} alt="bangladesh" />
+      </div>
+    </section>
   );
 }

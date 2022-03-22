@@ -25,7 +25,6 @@ export default function PressRelease() {
             <p
               key={index}
               className="pl-5 line-clamp-3 text-md text-bodyText font-semibold"
-              pressRelease={pressRelease}
             >
               {pressRelease.description}
             </p>
