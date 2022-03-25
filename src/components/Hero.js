@@ -36,7 +36,7 @@ export default function Hero() {
           <div className="carousel-inner relative w-full overflow-hidden">
             <div className="carousel-item active relative float-left w-full">
               <img
-                src="https://thefinancialexpress.com.bd/uploads/1504605140.jpg"
+                src="https://images.prothomalo.com/prothomalo-english/2021-02/c42c2f37-d140-4f18-b165-178690010e9e/r.jpeg?w=1200&h=630"
                 className="block w-full object-contain"
                 alt="..."
               />
