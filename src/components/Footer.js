@@ -1,145 +1,64 @@
 import React from "react";
-import { BrowserRouter as Link } from "react-router-dom";
+
+import footerData from "../data/home/footerData";
 
 export default function Footer() {
   return (
-    <footer className="text-gray-600 font-display">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap md:text-left text-center order-first">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
-            </h2>
-            <nav className="list-none mb-10">
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  First Link
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  Second Link
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  Third Link
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  Fourth Link
-                </a>
-              </li>
-            </nav>
-          </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
-            </h2>
-            <nav className="list-none mb-10">
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  First Link
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  Second Link
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  Third Link
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  Fourth Link
-                </a>
-              </li>
-            </nav>
-          </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
-            </h2>
-            <nav className="list-none mb-10">
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  First Link
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  Second Link
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  Third Link
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-600 hover:text-gray-800">
-                  Fourth Link
-                </a>
-              </li>
-            </nav>
-          </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              SUBSCRIBE
-            </h2>
-            <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
-              <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
-                <label
-                  for="footer-field"
-                  className="leading-7 text-sm text-gray-600"
+    <footer className="bg-footer w-full bg-center bg-contain relative z-10">
+      <div className="text-white bg-green-700 bg-opacity-80 top-0 left-0 z-20">
+        <div className="container px-5 py-10 mx-auto z-30">
+          <div className="flex flex-wrap md:text-left text-left order-first ml-4 first:ml-0">
+            {footerData.map((footerData, index) => {
+              return (
+                <div
+                  key={index}
+                  className="lg:w-1/3 md:w-1/2 w-full px-4  mb-8 lg:mb-0"
                 >
-                  Placeholder
-                </label>
-                <input
-                  type="text"
-                  id="footer-field"
-                  name="footer-field"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  spellcheck="false"
-                  data-ms-editor="true"
-                />
-              </div>
-              <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-                Button
-              </button>
-            </div>
-            <p className="text-gray-500 text-sm mt-2 md:text-left text-center">
-              Bitters chicharrones fanny pack
-              <br className="lg:block hidden" />
-              waistcoat green juice
-            </p>
+                  <h4 className="text-green-50 font-semibold tracking-widest text-lg mb-2  ">
+                    {footerData.title}
+                  </h4>
+                  <div className="mb-4 border-b-2 border-solid border-b-green-800"></div>
+                  {footerData.image ? (
+                    <div className="flex justify center lg:justify-start w-[90%]">
+                      <img src={footerData.image} alt="facebook-page" />
+                    </div>
+                  ) : (
+                    <nav className="list-none">
+                      {footerData.items.map((item, index) => (
+                        <li key={index} className="mb-3">
+                          <a href="/">{item}</a>
+                        </li>
+                      ))}
+                    </nav>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
-      <div className="bg-gray-100">
-        <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-          <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-            © 2022 RAB —
+
+      {/* lower section */}
+      <div className="bg-green-900 text-green-50 bg-opacity-95 bottom-0 left-0 w-full">
+        <div className="px-5 py-5 flex items-center justify-between flex-row ">
+          <p className="text-sm ml-6">
+            © all rights reserved Comm & MIS Wing,
             <a
               href="https://twitter.com/knyttneve"
               rel="noopener noreferrer"
-              className="text-gray-600 ml-1"
+              className="ml-1"
               target="_blank"
             >
-              @developer
+              RAB HQ
             </a>
           </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a href="/" className="text-gray-500">
+          <div className="flex lg:justify-center justify-start">
+            <a href="/">
               <svg
                 fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -149,9 +68,9 @@ export default function Footer() {
             <a href="/" className="ml-3 text-gray-500">
               <svg
                 fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -162,9 +81,9 @@ export default function Footer() {
               <svg
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -176,9 +95,9 @@ export default function Footer() {
               <svg
                 fill="currentColor"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="0"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
               >
@@ -189,7 +108,7 @@ export default function Footer() {
                 <circle cx="4" cy="4" r="2" stroke="none"></circle>
               </svg>
             </a>
-          </span>
+          </div>
         </div>
       </div>
     </footer>

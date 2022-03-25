@@ -24,6 +24,10 @@ module.exports = {
 
     extend: {
       colors: colors,
+
+      backgroundImage: {
+        "footer": "url('/src/images/footer-rab.png')",
+      },
     },
   },
   plugins: [

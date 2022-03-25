@@ -4,7 +4,7 @@ import Header from "./Header";
 export default function Hero() {
   return (
     <section>
-      <Header className="" />
+      <Header />
       <div className="relative">
         <div
           id="carouselExampleCaptions"

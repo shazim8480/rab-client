@@ -9,23 +9,22 @@ import pressRelease from "../../data/home/pressRelease";
 export default function PressRelease() {
   return (
     <ContentContainer>
-      <div className="flex justify-start items-center mb-5 ">
+      <div className="flex justify-start items-center lg:mb-5 mb-8 ">
         <FontAwesomeIcon
           className="text-primary"
           icon={faNewspaper}
           size="2xl"
         />
-        <h5 className="text-primary font-semibold text-xl ml-3">প্রেস রিলিজ</h5>
+        <h5 className="text-primary font-semibold lg:text-xl text-lg ml-3">
+          প্রেস রিলিজ
+        </h5>
       </div>
 
       <div>
         {pressRelease.map((pressRelease, index) => (
-          <div className="flex justify-center items-start mb-5">
+          <div key={index} className="flex justify-center items-start mb-5">
             <CalendarContainer pressRelease={pressRelease} />
-            <p
-              key={index}
-              className="pl-5 line-clamp-3 text-md text-bodyText font-semibold"
-            >
+            <p className="pl-5 line-clamp-3 text-sm text-bodyText font-semibold">
               {pressRelease.description}
             </p>
           </div>

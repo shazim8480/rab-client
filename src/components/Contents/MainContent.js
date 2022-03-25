@@ -5,20 +5,22 @@ import ContentContainer from "./ContentContainer";
 export default function MainContent({ mainContent }) {
   return (
     <ContentContainer>
-      <div className="flex justify-start">
+      <div className="lg:flex lg:justify-start">
         <img
-          className="mt-16 w-28 h-28 object-cover rounded-full ring-2"
-          src="https://media-eng.dhakatribune.com/uploads/2019/08/new-cid-head-file-photo-1-1567000542725.gif"
+          className="lg:mt-12 mt-3 lg:mx-0 mx-auto w-20 h-20 lg:w-24 lg:h-24 object-cover rounded-full"
+          src={mainContent.profileImg}
           alt=""
         />
         <div className="p-6 flex flex-col justify-center">
-          <h5 className="text-gray-900 text-xl font-medium mb-2">
+          <h5 className="text-primary text-center lg:text-left lg:text-xl text-lg font-bold mb-2">
             {mainContent.title}
           </h5>
-          <p className="text-gray-700 text-base mb-4 line-clamp-5">
+          <p className="text-bodyText text-justify lg:text-left text-sm mb-4 line-clamp-5">
             {mainContent.description}
           </p>
-          <p className="text-gray-600 text-xs">Last updated 3 mins ago</p>
+          <p className="text-green-600 text-center lg:text-left text-xs">
+            Last updated 3 mins ago
+          </p>
         </div>
       </div>
     </ContentContainer>

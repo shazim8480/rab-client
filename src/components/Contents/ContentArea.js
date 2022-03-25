@@ -9,7 +9,7 @@ import pressRelease from "../../data/home/pressRelease";
 
 export default function ContentArea() {
   return (
-    <main className="space-y-12">
+    <main className="space-y-12 mx-4 lg:mx-0">
       <section className="grid lg:grid-cols-2 gap-4 lg:gap-0 items-center">
         {mainContent.map((mainContent, idx) => (
           <MainContent key={idx} mainContent={mainContent} />

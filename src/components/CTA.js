@@ -2,13 +2,13 @@ import React from "react";
 
 export default function CTA() {
   return (
-    <section className="py-20 lg:py-[120px] font-display">
+    <section className="py-20 lg:py-[120px] font-display ">
       <div className="container">
         <div
-          className="
-         bg-green-800
+          className="w-[100%]
+         bg-white
          relative
-         rounded
+         rounded-xl
          overflow-hidden
          py-12
          px-8
@@ -16,21 +16,16 @@ export default function CTA() {
          z-10
          "
         >
-          <div className="flex flex-wrap items-center -mx-4">
-            <div className="w-full lg:w-1/2 px-4 lg:text-left">
-              <span className="text-green-50 text-base font-semibold mb-2">
-                Report to
-              </span>
+          <div className="flex flex-wrap items-center -mx-4 text-center lg:text-left">
+            <div className="w-full lg:w-1/2 px-4 text-slate-700">
+              <span className="text-base font-semibold mb-2 ">Report to</span>
               <h2
                 className="
-                  text-white
                   font-bold
                   text-3xl
                   sm:text-[38px]
                   leading-tight
-                  mb-6
-                  sm:mb-8
-                  lg:mb-0
+                  lg:my-6 my-0
                   "
               >
                 RAB Mobile Application
@@ -51,15 +46,15 @@ export default function CTA() {
                      rounded
                      text-base
                      font-medium
-                     bg-white bg-opacity-[15%]
+                     bg-slate-600 bg-opacity-[85%]
                      text-white
-                     hover:bg-opacity-100 hover:text-green-800
+                     hover:bg-green-700 hover:text-green-50
                      mr-4
                      my-1
                      transition
                      "
                 >
-                  Apple Store
+                  App Store
                 </a>
                 <a
                   href="/"
@@ -73,7 +68,7 @@ export default function CTA() {
                      rounded
                      text-base
                      font-medium
-                     bg-green-500
+                     bg-green-800
                      transition
                      hover:bg-opacity-90
                      text-white
@@ -111,8 +106,8 @@ export default function CTA() {
                     y2="-106.425"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="white" stop-opacity="0.07" />
-                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                    <stop stopColor="white" stopOpacity="0.07" />
+                    <stop offset="1" stopColor="white" stopOpacity="0" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -141,8 +136,8 @@ export default function CTA() {
                     y2="88.5747"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="white" stop-opacity="0.07" />
-                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                    <stop stopColor="white" stopOpacity="0.07" />
+                    <stop offset="1" stopColor="white" stopOpacity="0" />
                   </linearGradient>
                 </defs>
               </svg>
