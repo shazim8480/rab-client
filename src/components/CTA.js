@@ -51,7 +51,9 @@ export default function CTA() {
                      hover:bg-green-700 hover:text-green-50
                      mr-4
                      my-1
-                     transition
+                     transition ease-in-out delay-150
+                     hover:-translate-y-1
+                     hover:scale-110 duration-200
                      "
                 >
                   App Store
@@ -69,7 +71,9 @@ export default function CTA() {
                      text-base
                      font-medium
                      bg-green-800
-                     transition
+                     transition ease-in-out delay-150
+                     hover:-translate-y-1
+                     hover:scale-110 duration-200
                      hover:bg-opacity-90
                      text-white
                      my-1
